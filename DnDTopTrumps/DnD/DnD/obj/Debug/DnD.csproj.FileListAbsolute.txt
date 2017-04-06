@@ -1,1 +1,2 @@
 c:\users\0405993209\documents\visual studio 2013\Projects\DnD\DnD\bin\Debug\DnD.exe.config
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnD\DnD\bin\Debug\DnD.exe.config

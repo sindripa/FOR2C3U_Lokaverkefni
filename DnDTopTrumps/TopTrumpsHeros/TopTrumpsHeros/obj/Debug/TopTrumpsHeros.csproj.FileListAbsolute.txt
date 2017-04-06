@@ -3,3 +3,6 @@ C:\Users\0405993209\Documents\Visual Studio 2013\Projects\TopTrumpsHeros\TopTrum
 C:\Users\0405993209\Documents\Visual Studio 2013\Projects\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.csprojResolveAssemblyReference.cache
 C:\Users\0405993209\Documents\Visual Studio 2013\Projects\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.dll
 C:\Users\0405993209\Documents\Visual Studio 2013\Projects\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.csprojResolveAssemblyReference.cache
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.dll
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
