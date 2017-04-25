@@ -2,3 +2,15 @@
 	Byrjun á verkefni: TopTrumps/lokaverkefni
 	Byrjaðir á Klasasafninu.
 	Kláruðum klasasafnið.
+	
+	
+sirka 10/4/2017-18/4/2017, Sirka Srirka 11 klst(4 klst skjekumörk, ég man þetta ekkert)
+	Ég bjó til Caracter stokk með skapandi nöfn og game balence í huga.
+	Byrjaði á keyrslu klassa
+	
+19/4/2017 4 klst
+	Vann í Klass Librarí: gerði klassa sem sér um að meðhöndla spilin; skapa í array, færa í lista, búa til meðaltals array fyrir AI.
+	Gerði keyrslu klassan virkan: basic info display, valmynd fyrir statt, AI, kláraði að gera allt virkt.
+	
+25/4/2017 5 klst (grín)
+	gerði Sindra up-to-date á forritinu
