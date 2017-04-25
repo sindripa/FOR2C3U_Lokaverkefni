@@ -11,7 +11,7 @@ namespace DnD
     {
         static void Main(string[] args)
         {
-            //stocka val
+            //stokka val
             bool PlayersTurn = true;
             short input=8;
             stockurDnD kek = new stockurDnD();
@@ -34,7 +34,8 @@ namespace DnD
             {
                 if (PlayersTurn)//who picks?
                 {
-                    PlayersTurn = true;
+                    input = AI(PlayerStockur[0], kek);
+                    /*
                     do
                     {
                         Console.Clear();
@@ -50,7 +51,7 @@ namespace DnD
                         Console.WriteLine("7)Charisma");
                         Console.Write("Select the stat(the number): ");
                         input = Convert.ToInt16(Console.ReadLine());
-                    } while (input < 0 || input > 7);
+                    } while (input < 0 || input > 7);*/
                     PlayersTurn = false;
                 }
                 else

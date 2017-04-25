@@ -8,3 +8,11 @@ C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lo
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.exe
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\DnD.exe.config
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.exe
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\DnD.exe
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\DnD.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\TopTrumpsHeros.dll
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\TopTrumpsHeros.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache

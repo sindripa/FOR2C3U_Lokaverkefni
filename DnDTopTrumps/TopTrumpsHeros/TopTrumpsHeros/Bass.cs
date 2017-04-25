@@ -61,7 +61,7 @@ namespace TopTrumpsDnD
     public class stockurDnD
     {
         public List<Player> stockur = new List<Player>();
-        public Player[] stockurinn = {  new Player("LightNir", "Rogue/arcane trickster", "Half elf", 14, 13, 12, 17, 10, 16, 12, 10),
+        public static Player[] CharacterStokkurinn = {  new Player("LightNir", "Rogue/arcane trickster", "Half elf", 14, 13, 12, 17, 10, 16, 12, 10),
                                         new Player("NoLeb", "Druid/Circle of Land", "Human", 10, 15, 17, 9, 13, 13, 17, 10),
                                         new Player("Sindri Páls", "Cleric", "Human", 10, 10, 10, 8, 12, 13, 10, 6),
                                         new Player("Snorri", "Teacher", "Human", 11, 15, 11, 11, 11, 14, 13, 10),
@@ -114,6 +114,64 @@ namespace TopTrumpsDnD
                                         new Player("Slashon", "Rogue", "Human", 15, 10, 10, 18, 11, 12, 11, 13),
                                         new Player("Hance", "Cleric", "Half Orc", 18, 9, 10, 7, 9, 17, 15, 15)
                                      };
+
+        public static Bass[] MonsterStokkurinn = {  
+                                        new Bass("Chimera",14,114,19,11,19,3,14,10),
+                                        new Bass("Cyclops",14,138,22,11,20,8,6,10),
+                                        new Bass("Chasme",15,84,15,15,12,11,14,10),
+                                        new Bass("Vrock",15,104,17,15,18,8,13,8),
+                                        new Bass("Young White Dragon",17,133,18,10,18,6,11,12),
+                                        new Bass("Young Brass Dragon",17,110,19,10,17,12,11,15),
+                                        new Bass("Drider",19,123,16,16,18,13,14,12),
+                                        new Bass("Galeb Duhr",16,85,20,14,20,11,12,11),
+                                        new Bass("Githzerai Zerth",17,84,13,18,15,16,17,12),
+                                        new Bass("Hobgoblin Warlord",20,97,16,14,16,14,11,15),
+                                        new Bass("Invisible Stalker",14,104,16,19,14,10,15,11),
+                                        new Bass("Kuo-Toa Archpriest",13,97,16,14,16,13,16,14),
+                                        new Bass("Medusa",15,127,10,15,16,12,13,15),
+                                        new Bass("Wyvern",13,110,19,10,16,5,12,6),
+                                        new Bass("Mammoth",13,126,24,9,21,3,11,6),
+                                        new Bass("Mage",12,40,9,14,11,17,12,11),
+                                        new Bass("Young Black Dragon",18,127,19,14,17,12,11,15),
+                                        new Bass("Young Copper Dragon",17,119,19,12,17,16,13,15),
+                                        new Bass("Drow Mage",12,45,9,14,10,17,13,12),
+                                        new Bass("Stone Giant",17,126,23,15,20,10,12,9),
+                                        new Bass("Grick Alpha",18,75,18,16,15,4,14,9),
+                                        new Bass("Mind Flayer",15,71,11,12,12,19,17,17),
+                                        new Bass("Oni",16,110,19,11,16,14,12,15),
+                                        new Bass("Shield Guardian",17,142,18,8,18,7,10,3),
+                                        new Bass("Blue Slaad",15,123,20,15,18,7,7,9),
+                                        new Bass("Yuan-Ti Abomination",15,127,19,16,17,17,15,18),
+                                        new Bass("Giant Ape",12,157,23,14,18,7,12,7),
+                                        new Bass("Young Green Dragon",18,136,19,12,17,16,13,15),
+                                        new Bass("Cloaker",14,78,17,15,12,13,12,14),
+                                        new Bass("Hezrou",16,136,19,17,20,5,12,13),
+                                        new Bass("Chain Devil",16,85,18,15,18,11,12,14),
+                                        new Bass("Tyrannosaurus Rex",13,136,25,10,19,2,12,9),
+                                        new Bass("Young Bronze Dragon",18,142,21,10,19,14,13,17),
+                                        new Bass("Drow Priestess of Lolth",16,71,10,14,12,13,17,18),
+                                        new Bass("Fomorian",14,149,23,10,20,9,14,6),
+                                        new Bass("Frost Giant",15,138,23,9,21,9,10,12),
+                                        new Bass("Githyanki Knight",18,91,16,14,15,14,14,15),
+                                        new Bass("Hydra",15,172,20,12,20,2,10,7),
+                                        new Bass("Spirit Naga",15,75,18,17,14,16,15,15),
+                                        new Bass("Green Slaad",16,127,18,15,16,11,8,12),
+                                        new Bass("Assassin",15,78,11,16,14,13,11,10),
+                                        new Bass("Glabrezu",17,157,20,15,21,19,17,16),
+                                        new Bass("Bone Devil",19,142,18,16,18,13,14,16),
+                                        new Bass("Young Blue Dragon",18,152,21,10,19,14,13,17),
+                                        new Bass("Young Silver Dragon",18,168,23,10,21,14,11,19),
+                                        new Bass("Cloud Giant",14,200,27,10,22,12,16,16),
+                                        new Bass("Fire Giant",18,162,25,9,23,10,14,13),
+                                        new Bass("Clay Golem",14,133,20,9,18,3,8,1),
+                                        new Bass("Gray Slaad",18,127,17,17,16,13,8,14),
+                                        new Bass("Treant",16,138,23,8,21,12,16,12),
+                                        new Bass("Abominable Yeti",15,137,24,10,22,9,13,9),
+                                        new Bass("Nycaloth",18,123,20,11,19,12,10,15)
+                                     };
+
+        public Bass[][] stokkarnir = { CharacterStokkurinn, MonsterStokkurinn };
+
         public double AcAvg
         {
             get
@@ -211,20 +269,21 @@ namespace TopTrumpsDnD
             }
         }
         public double[] StatsAvg = new double[8];
-        public stockurDnD()
+
+        public stockurDnD(int stokkurNm)
         {
             for (int i = 0; i < 52; i++)
             {
-                stockur.Add(stockurinn[i]);
-                StatsAvg[0] = AcAvg;
-                StatsAvg[1] = HpAvg;
-                StatsAvg[2] = StrAvg;
-                StatsAvg[3] = DexAvg;
-                StatsAvg[4] = ConAvg;
-                StatsAvg[5] = IntAvg;
-                StatsAvg[6] = WisAvg;
-                StatsAvg[7] = ChaAvg;
+                stockur.Add(stokkarnir[stokkurNm][i]);
             }
+            StatsAvg[0] = AcAvg;
+            StatsAvg[1] = HpAvg;
+            StatsAvg[2] = StrAvg;
+            StatsAvg[3] = DexAvg;
+            StatsAvg[4] = ConAvg;
+            StatsAvg[5] = IntAvg;
+            StatsAvg[6] = WisAvg;
+            StatsAvg[7] = ChaAvg;
         }
     }
 }
