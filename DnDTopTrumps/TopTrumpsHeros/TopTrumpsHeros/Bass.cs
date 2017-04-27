@@ -60,7 +60,7 @@ namespace TopTrumpsDnD
     }
     public class stockurDnD
     {
-        public List<Player> stockur = new List<Player>();
+        public List<Bass> stockur = new List<Bass>();
         public static Player[] CharacterStokkurinn = {  new Player("LightNir", "Rogue/arcane trickster", "Half elf", 14, 13, 12, 17, 10, 16, 12, 10),
                                         new Player("NoLeb", "Druid/Circle of Land", "Human", 10, 15, 17, 9, 13, 13, 17, 10),
                                         new Player("Sindri Páls", "Cleric", "Human", 10, 10, 10, 8, 12, 13, 10, 6),
