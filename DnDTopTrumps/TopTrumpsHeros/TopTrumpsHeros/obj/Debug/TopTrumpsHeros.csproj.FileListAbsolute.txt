@@ -11,3 +11,8 @@ C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lo
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.dll
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.dll
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.pdb
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.csprojResolveAssemblyReference.cache
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.dll
+H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
