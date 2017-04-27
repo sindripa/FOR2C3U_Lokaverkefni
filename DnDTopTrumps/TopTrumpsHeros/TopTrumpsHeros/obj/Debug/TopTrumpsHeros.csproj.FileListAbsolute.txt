@@ -11,3 +11,8 @@ C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lo
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.dll
 C:\Users\Sigurðurorri\Documents\Visual Studio 2015\Projects\fjordaOn\FOR2C3U_Lokaverkefni\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.pdb
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.csprojResolveAssemblyReference.cache
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.dll
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\obj\Debug\TopTrumpsHeros.pdb
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.dll
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\TopTrumpsHeros\TopTrumpsHeros\bin\Debug\TopTrumpsHeros.pdb
