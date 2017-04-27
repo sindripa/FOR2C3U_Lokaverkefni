@@ -11,138 +11,161 @@ namespace DnD
     {
         static void Main(string[] args)
         {
+
             //stokka val
-            bool PlayersTurn = true;
-            short input=8;
-            stockurDnD kek = new stockurDnD();
-            List<Player> stockur = shofle(kek.stockur);
-            List<Player> AiStockur = new List<Player>();
-            List<Player> PlayerStockur = new List<Player>();
-            List<Player> cardPool = new List<Player>();
-            for (int i = 0; i < 52; i++)
+            int stokkavalmynd = 0;
+            stokkurDnD kek0 = new stokkurDnD(0);
+            Console.WriteLine("Veldu stokk:");
+            for (int i = 1; i <= kek0.stokkarnir.Length; i++)
             {
-                if (26>i)
-                {
-                    PlayerStockur.Add(stockur[i]);
-                }
-                else
-                {
-                    AiStockur.Add(stockur[i]);
-                }
+                Console.WriteLine("\t" + i + ". Stokkur " + i + ".");
             }
-            while (PlayerStockur.Count > 0 && AiStockur.Count > 0)
+            Console.WriteLine("0. Hætta.");
+            try
             {
-                if (PlayersTurn)//who picks?
-                {
-                    input = AI(PlayerStockur[0], kek);
-                    /*
-                    do
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Player: " + PlayerStockur.Count + " vs AI: " + AiStockur.Count);
-                        Console.WriteLine(PlayerStockur[0]);
-                        Console.WriteLine("\n0)Armor class");
-                        Console.WriteLine("1)Health Points");
-                        Console.WriteLine("2)Strength");
-                        Console.WriteLine("3)Dexterity");
-                        Console.WriteLine("4)Constitution");
-                        Console.WriteLine("5)Intelligence");
-                        Console.WriteLine("6)Wistom");
-                        Console.WriteLine("7)Charisma");
-                        Console.Write("Select the stat(the number): ");
-                        input = Convert.ToInt16(Console.ReadLine());
-                    } while (input < 0 || input > 7);*/
-                    PlayersTurn = false;
-                }
-                else
-                {
-                    input = AI(AiStockur[0], kek);
-                    PlayersTurn = true;
-                }
+                stokkavalmynd = Convert.ToInt32(Console.ReadLine());
+            }catch (Exception ex){}
+
+            do
+            {
                 Console.Clear();
-                if (PlayersTurn)
+                bool PlayersTurn = true;
+                double input=8;
+                
+                if (stokkavalmynd <= (kek0.stokkarnir.Length - 1))
                 {
-                    switch (input)
+                    stokkurDnD kek = new stokkurDnD(stokkavalmynd);
+                }
+                List<Bass> stokkur = shofle(kek.stokkur);
+                List<Bass> Aistokkur = new List<Bass>();
+                List<Bass> Playerstokkur = new List<Bass>();
+                List<Bass> cardPool = new List<Bass>();
+                for (int i = 0; i < 52; i++)
+                {
+                    if (26>i)
                     {
-                        case 0:
-                            Console.WriteLine("AI picks Armor class");
-                            break;
-                        case 1:
-                            Console.WriteLine("AI picks Health");
-                            break;
-                        case 2:
-                            Console.WriteLine("AI picks Strength");
-                            break;
-                        case 3:
-                            Console.WriteLine("AI picks Dexterity");
-                            break;
-                        case 4:
-                            Console.WriteLine("AI picks Constitution");
-                            break;
-                        case 5:
-                            Console.WriteLine("AI picks Intelligence");
-                            break;
-                        case 6:
-                            Console.WriteLine("AI picks Wistom");
-                            break;
-                        case 7:
-                            Console.WriteLine("AI picks Charisma");
-                            break;
-                        default:
-                            Console.WriteLine("ehhh");
-                            break;
+                        Playerstokkur.Add(stokkur[i]);
+                    }
+                    else
+                    {
+                        Aistokkur.Add(stokkur[i]);
                     }
                 }
-                Console.WriteLine("Player: "+ PlayerStockur[0].Stats[input]+" vs AI: "+AiStockur[0].Stats[input]);
-                Console.WriteLine(PlayerStockur[0]);
-                Console.WriteLine("vs");
-                Console.WriteLine(AiStockur[0]);
+                while (Playerstokkur.Count > 0 && Aistokkur.Count > 0)
+                {
+                    if (PlayersTurn)//who picks?
+                    {
+                        input = AI(Playerstokkur[0], kek);
+                        /*
+                        do
+                        {
+                            Console.Clear();
+                            Console.WriteLine("Player: " + Playerstokkur.Count + " vs AI: " + Aistokkur.Count);
+                            Console.WriteLine(Playerstokkur[0]);
+                            Console.WriteLine("\n0)Armor class");
+                            Console.WriteLine("1)Health Points");
+                            Console.WriteLine("2)Strength");
+                            Console.WriteLine("3)Dexterity");
+                            Console.WriteLine("4)Constitution");
+                            Console.WriteLine("5)Intelligence");
+                            Console.WriteLine("6)Wistom");
+                            Console.WriteLine("7)Charisma");
+                            Console.Write("Select the stat(the number): ");
+                            input = Convert.ToInt16(Console.ReadLine());
+                        } while (input < 0 || input > 7);*/
+                        PlayersTurn = false;
+                    }
+                    else
+                    {
+                        input = AI(Aistokkur[0], kek);
+                        PlayersTurn = true;
+                    }
+                    Console.Clear();
+                    if (PlayersTurn)
+                    {
+                        switch (input)
+                        {
+                            case 0:
+                                Console.WriteLine("AI picks Armor class");
+                                break;
+                            case 1:
+                                Console.WriteLine("AI picks Health");
+                                break;
+                            case 2:
+                                Console.WriteLine("AI picks Strength");
+                                break;
+                            case 3:
+                                Console.WriteLine("AI picks Dexterity");
+                                break;
+                            case 4:
+                                Console.WriteLine("AI picks Constitution");
+                                break;
+                            case 5:
+                                Console.WriteLine("AI picks Intelligence");
+                                break;
+                            case 6:
+                                Console.WriteLine("AI picks Wistom");
+                                break;
+                            case 7:
+                                Console.WriteLine("AI picks Charisma");
+                                break;
+                            default:
+                                Console.WriteLine("ehhh");
+                                break;
+                        }
+                    }
+                    Console.WriteLine("Player: "+ Playerstokkur[0].Stats[input]+" vs AI: "+Aistokkur[0].Stats[input]);
+                    Console.WriteLine(Playerstokkur[0]);
+                    Console.WriteLine("vs");
+                    Console.WriteLine(Aistokkur[0]);
+                    Console.ReadKey();
+                    if (Playerstokkur[0].Stats[input] == Aistokkur[0].Stats[input])
+                    {
+                        cardPool.Add(Playerstokkur[0]);
+                        cardPool.Add(Aistokkur[0]);
+                        Playerstokkur.Remove(Playerstokkur[0]);
+                        Aistokkur.Remove(Aistokkur[0]);
+                    }
+                    else if (Playerstokkur[0].Stats[input] > Aistokkur[0].Stats[input])
+                    {
+                        Playerstokkur.Add(Playerstokkur[0]);
+                        Playerstokkur.Add(Aistokkur[0]);
+                        Playerstokkur.Remove(Playerstokkur[0]);
+                        Aistokkur.Remove(Aistokkur[0]);
+                        cardPool = shofle(cardPool);
+                        for (int i = 0; i < cardPool.Count();)
+                        {
+                            Playerstokkur.Add(cardPool[0]);
+                            cardPool.Remove(cardPool[0]);
+                        }
+                    }
+                    else
+                    {
+                        Aistokkur.Add(Aistokkur[0]);
+                        Aistokkur.Add(Playerstokkur[0]);
+                        Playerstokkur.Remove(Playerstokkur[0]);
+                        Aistokkur.Remove(Aistokkur[0]);
+                        cardPool = shofle(cardPool);
+                        for (int i = 0; i < cardPool.Count();)
+                        {
+                            Aistokkur.Add(cardPool[0]);
+                            cardPool.Remove(cardPool[0]);
+                        }
+                    }
+                }
                 Console.ReadKey();
-                if (PlayerStockur[0].Stats[input] == AiStockur[0].Stats[input])
-                {
-                    cardPool.Add(PlayerStockur[0]);
-                    cardPool.Add(AiStockur[0]);
-                    PlayerStockur.Remove(PlayerStockur[0]);
-                    AiStockur.Remove(AiStockur[0]);
-                }
-                else if (PlayerStockur[0].Stats[input] > AiStockur[0].Stats[input])
-                {
-                    PlayerStockur.Add(PlayerStockur[0]);
-                    PlayerStockur.Add(AiStockur[0]);
-                    PlayerStockur.Remove(PlayerStockur[0]);
-                    AiStockur.Remove(AiStockur[0]);
-                    cardPool = shofle(cardPool);
-                    for (int i = 0; i < cardPool.Count();)
-                    {
-                        PlayerStockur.Add(cardPool[0]);
-                        cardPool.Remove(cardPool[0]);
-                    }
-                }
-                else
-                {
-                    AiStockur.Add(AiStockur[0]);
-                    AiStockur.Add(PlayerStockur[0]);
-                    PlayerStockur.Remove(PlayerStockur[0]);
-                    AiStockur.Remove(AiStockur[0]);
-                    cardPool = shofle(cardPool);
-                    for (int i = 0; i < cardPool.Count();)
-                    {
-                        AiStockur.Add(cardPool[0]);
-                        cardPool.Remove(cardPool[0]);
-                    }
-                }
-            }
-            Console.ReadKey();
+
+            } while (stokkavalmynd != "0");
         }
 
-        public static short AI(Player dude, stockurDnD kek)
+        public static double AI(Bass dude, stokkurDnD kek)
         {
             double[] shift = new double[8];
             for (int i = 0; i < 8; i++)
             {
                 shift[i] = dude.Stats[i]-kek.StatsAvg[i];
             }
-            for (short i = 0; i < 8; i++)
+            for (double i = 0; i < 8; i++)
             {
                 if (shift[i]==shift.Max())
                 {
@@ -152,10 +175,10 @@ namespace DnD
             return 1;
         }
 
-        public static List<Player> shofle(List<Player> kok)
+        public static List<Bass> shofle(List<Bass> kok)
         {
-            List<Player> oldone = kok;
-            List<Player> newone = new List<Player>();
+            List<Bass> oldone = kok;
+            List<Bass> newone = new List<Bass>();
             int init;
             Random rand = new Random();
             for (int i = 0; i < oldone.Count;)//rennur þangað til að stokkur klárast
