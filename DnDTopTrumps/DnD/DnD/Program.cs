@@ -13,6 +13,7 @@ namespace DnD
         {
 
             //stokka val
+            Random random = new Random();
             int stokkavalmynd = 0;
             stokkurDnD Stokkar = new stokkurDnD();
             Console.WriteLine("Veldu stokk:");
@@ -52,24 +53,20 @@ namespace DnD
                 {
                     if (PlayersTurn)//who picks?
                     {
-                        input = AI(Playerstokkur[0], avgStats);
-                        /*
+                        //input = AI(Playerstokkur[0], avgStats);
+                        
                         do
                         {
                             Console.Clear();
                             Console.WriteLine("Player: " + Playerstokkur.Count + " vs AI: " + Aistokkur.Count);
-                            Console.WriteLine(Playerstokkur[0]);
-                            Console.WriteLine("\n0)Armor class");
-                            Console.WriteLine("1)Health Points");
-                            Console.WriteLine("2)Strength");
-                            Console.WriteLine("3)Dexterity");
-                            Console.WriteLine("4)Constitution");
-                            Console.WriteLine("5)Intelligence");
-                            Console.WriteLine("6)Wistom");
-                            Console.WriteLine("7)Charisma");
+                            Console.WriteLine(Playerstokkur[0]+"\n");
+                            for (int i = 0; i < stokkur[0].StatsName.Length; i++)
+                            {
+                                Console.WriteLine(i + ")" + stokkur[0].StatsName[i]);
+                            }
                             Console.Write("Select the stat(the number): ");
                             input = Convert.ToInt16(Console.ReadLine());
-                        } while (input < 0 || input > 7);*/
+                        } while (input < 0 || input > stokkur[0].StatsName.Length);
                         PlayersTurn = false;
                     }
                     else
@@ -80,36 +77,8 @@ namespace DnD
                     Console.Clear();
                     if (PlayersTurn)
                     {
-                        switch (input)
-                        {
-                            case 0:
-                                Console.WriteLine("AI picks Armor class");
-                                break;
-                            case 1:
-                                Console.WriteLine("AI picks Health");
-                                break;
-                            case 2:
-                                Console.WriteLine("AI picks Strength");
-                                break;
-                            case 3:
-                                Console.WriteLine("AI picks Dexterity");
-                                break;
-                            case 4:
-                                Console.WriteLine("AI picks Constitution");
-                                break;
-                            case 5:
-                                Console.WriteLine("AI picks Intelligence");
-                                break;
-                            case 6:
-                                Console.WriteLine("AI picks Wistom");
-                                break;
-                            case 7:
-                                Console.WriteLine("AI picks Charisma");
-                                break;
-                            default:
-                                Console.WriteLine("ehhh");
-                                break;
-                        }
+                        Console.WriteLine("AI "+stokkur[0].StatsName[input]);
+                                
                     }
                     Console.WriteLine("Player: "+ Playerstokkur[0].Stats[input]+" vs AI: "+Aistokkur[0].Stats[input]);
                     Console.WriteLine(Playerstokkur[0]);
@@ -125,10 +94,16 @@ namespace DnD
                     }
                     else if (Playerstokkur[0].Stats[input] > Aistokkur[0].Stats[input])
                     {
-                        Playerstokkur.Add(Playerstokkur[0]);
-                        Playerstokkur.Add(Aistokkur[0]);
-                        Playerstokkur.Remove(Playerstokkur[0]);
-                        Aistokkur.Remove(Aistokkur[0]);
+                        if (random.Next(0,1)<0.5)
+                        {
+                            Playerstokkur.Add(Playerstokkur[0]);
+                            Playerstokkur.Add(Aistokkur[0]);
+                        }
+                        else
+                        {
+                            Aistokkur.Remove(Aistokkur[0]);
+                            Playerstokkur.Remove(Playerstokkur[0]);
+                        }
                         cardPool = shofle(cardPool);
                         for (int i = 0; i < cardPool.Count();)
                         {
@@ -138,8 +113,16 @@ namespace DnD
                     }
                     else
                     {
-                        Aistokkur.Add(Aistokkur[0]);
-                        Aistokkur.Add(Playerstokkur[0]);
+                        if (random.Next(0, 1) < 0.5)
+                        {
+                            Aistokkur.Add(Aistokkur[0]);
+                            Aistokkur.Add(Playerstokkur[0]);
+                        }
+                        else
+                        {
+                            Aistokkur.Add(Playerstokkur[0]);
+                            Aistokkur.Add(Aistokkur[0]);
+                        }
                         Playerstokkur.Remove(Playerstokkur[0]);
                         Aistokkur.Remove(Aistokkur[0]);
                         cardPool = shofle(cardPool);
@@ -160,7 +143,7 @@ namespace DnD
             double[] shift = new double[8];
             for (int i = 0; i < 8; i++)
             {
-                shift[i] = dude.Stats[i] - avgStats[i];
+                shift[i] = dude.Stats[i] / avgStats[i];
             }
             for (int i = 0; i < 8; i++)
             {
