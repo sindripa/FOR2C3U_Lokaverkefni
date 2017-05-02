@@ -16,9 +16,9 @@ namespace DnD
             int stokkavalmynd = 0;
             stokkurDnD Stokkar = new stokkurDnD();
             Console.WriteLine("Veldu stokk:");
-            for (int i = 1; i <= Stokkar.stokkarnir.Length; i++)
+            for (int i = 0; i < Stokkar.stokkarnir.Length; i++)
             {
-                Console.WriteLine("\t" + i + ". Stokkur " + i + ".");
+                Console.WriteLine("\t" + i + ". Stokkur " + Stokkar.stokkarnir[i] + ".");
             }
             Console.WriteLine("0. Hætta.");
             try
@@ -32,7 +32,7 @@ namespace DnD
                 bool PlayersTurn = true;
                 int input=0;
 
-                List<Bass> stokkur = shofle(stokkur.getDeck(stokkavalmynd));
+                List<Bass> stokkur = shofle(Stokkar.getDeck(stokkavalmynd));
                 double[] avgStats = Stokkar.AvgStats(stokkavalmynd);
                 List<Bass> Aistokkur = new List<Bass>();
                 List<Bass> Playerstokkur = new List<Bass>();

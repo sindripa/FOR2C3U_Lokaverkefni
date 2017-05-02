@@ -134,6 +134,7 @@ namespace TopTrumpsDnD
             double[][] kek = new double[stokkarnir[stokkurNb][0].Stats.Length][];//ytri eru stöt, innri eru gildi
             for (int i = 0; i < stokkarnir[stokkurNb][0].Stats.Length; i++)//hvaða statti erum við á?
             {
+                kek[i] = new double[stokkarnir[stokkurNb].Length];
                 for (int k   = 0; k < stokkarnir[stokkurNb].Length; k++)//hvaða spili?
 			    {
                     kek[i][k]=stokkarnir[stokkurNb][k].Stats[i];
