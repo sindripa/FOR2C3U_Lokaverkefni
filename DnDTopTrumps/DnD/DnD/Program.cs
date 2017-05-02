@@ -14,9 +14,9 @@ namespace DnD
 
             //stokka val
             int stokkavalmynd = 0;
-            stokkurDnD kek0 = new stokkurDnD(0);
+            stokkurDnD Stokkar = new stokkurDnD();
             Console.WriteLine("Veldu stokk:");
-            for (int i = 1; i <= kek0.stokkarnir.Length; i++)
+            for (int i = 1; i <= Stokkar.stokkarnir.Length; i++)
             {
                 Console.WriteLine("\t" + i + ". Stokkur " + i + ".");
             }
@@ -30,13 +30,10 @@ namespace DnD
             {
                 Console.Clear();
                 bool PlayersTurn = true;
-                double input=8;
-                
-                if (stokkavalmynd <= (kek0.stokkarnir.Length - 1))
-                {
-                    stokkurDnD kek = new stokkurDnD(stokkavalmynd);
-                }
-                List<Bass> stokkur = shofle(kek.stokkur);
+                int input=0;
+
+                List<Bass> stokkur = shofle(stokkur.getDeck(stokkavalmynd));
+                double[] avgStats = Stokkar.AvgStats(stokkavalmynd);
                 List<Bass> Aistokkur = new List<Bass>();
                 List<Bass> Playerstokkur = new List<Bass>();
                 List<Bass> cardPool = new List<Bass>();
@@ -55,7 +52,7 @@ namespace DnD
                 {
                     if (PlayersTurn)//who picks?
                     {
-                        input = AI(Playerstokkur[0], kek);
+                        input = AI(Playerstokkur[0], avgStats);
                         /*
                         do
                         {
@@ -77,7 +74,7 @@ namespace DnD
                     }
                     else
                     {
-                        input = AI(Aistokkur[0], kek);
+                        input = AI(Aistokkur[0], avgStats);
                         PlayersTurn = true;
                     }
                     Console.Clear();
@@ -155,17 +152,17 @@ namespace DnD
                 }
                 Console.ReadKey();
 
-            } while (stokkavalmynd != "0");
+            } while (stokkavalmynd != 0);
         }
 
-        public static double AI(Bass dude, stokkurDnD kek)
+        public static int AI(Bass dude, double[] avgStats)
         {
             double[] shift = new double[8];
             for (int i = 0; i < 8; i++)
             {
-                shift[i] = dude.Stats[i]-kek.StatsAvg[i];
+                shift[i] = dude.Stats[i] - avgStats[i];
             }
-            for (double i = 0; i < 8; i++)
+            for (int i = 0; i < 8; i++)
             {
                 if (shift[i]==shift.Max())
                 {

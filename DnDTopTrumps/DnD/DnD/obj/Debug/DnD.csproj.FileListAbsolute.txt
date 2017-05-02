@@ -16,3 +16,6 @@ H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\
 H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\TopTrumpsHeros.dll
 H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\bin\Debug\TopTrumpsHeros.pdb
 H:\FOR\FOR2C3U\Skil\Lokaverkefni\Code\FOR2C3U_Lokaverkefni\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\DnD\DnD\bin\Debug\DnD.exe.config
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.exe
+C:\Users\0405993209\Documents\Visual Studio 2013\Projects\DnDTopTrumps\DnDTopTrumps\DnD\DnD\obj\Debug\DnD.csprojResolveAssemblyReference.cache

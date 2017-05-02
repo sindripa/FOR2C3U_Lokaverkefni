@@ -142,7 +142,15 @@ namespace TopTrumpsDnD
             }
             return AvgStat;
         }
-
+        public List<Bass> getDeck(int val)
+        {
+            List<Bass> stokkur = new List<Bass>();
+            for (int i = 0; i < stokkarnir[val].Length; i++)
+            {
+                stokkur.Add(stokkarnir[val][i]);
+            }
+            return stokkur;
+        }
         
     }
 }
