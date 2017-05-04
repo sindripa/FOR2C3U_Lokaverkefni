@@ -44,6 +44,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtificialBot.cs" />
+    <Compile Include="EasyAI.cs" />
+    <Compile Include="HardAI.cs" />
+    <Compile Include="MediumAI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

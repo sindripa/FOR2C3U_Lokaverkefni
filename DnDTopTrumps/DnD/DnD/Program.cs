@@ -27,8 +27,9 @@ namespace DnD
                 stokkavalmynd = Convert.ToInt32(Console.ReadLine())-1;
             }catch (Exception ex){}
 
-            do
+            while ((stokkavalmynd + 1) != 0)
             {
+
                 Console.Clear();
                 bool PlayersTurn = true;
                 int input=0;
@@ -49,6 +50,9 @@ namespace DnD
                         Aistokkur.Add(stokkur[i]);
                     }
                 }
+
+                ArtificialBot[] Bots = {new HardAI(avgStats), new MediumAI(avgStats), new EasyAI(avgStats)};
+
                 while (Playerstokkur.Count > 0 && Aistokkur.Count > 0)
                 {
                     if (PlayersTurn)//who picks?
@@ -138,24 +142,7 @@ namespace DnD
                 }
                 Console.ReadKey();
 
-            } while (stokkavalmynd != 0);
-        }
-
-        public static int AI(Bass dude, double[] avgStats)
-        {
-            double[] shift = new double[8];
-            for (int i = 0; i < avgStats.Length; i++)
-            {
-                shift[i] = dude.Stats[i] / avgStats[i];
-            }
-            for (int i = 0; i < 8; i++)
-            {
-                if (shift[i]==shift.Max())
-                {
-                    return i;
-                }
-            }
-            return 1;
+            };
         }
 
         public static List<Bass> shofle(List<Bass> kok)
