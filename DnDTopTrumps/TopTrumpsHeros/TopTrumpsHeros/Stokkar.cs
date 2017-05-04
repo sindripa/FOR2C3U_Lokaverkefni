@@ -16,6 +16,61 @@ namespace TopTrumpsDnD
             }
         }
         public List<Bass> stokkur = new List<Bass>();
+        public static pokemon[] pokemonStokkurinn = {
+                                        new pokemon("Pidgeot", 83, 80, 75, 70, 70, 101),
+                                        new pokemon("Rattata", 30, 56, 35, 25, 35, 72),
+                                        new pokemon("Sandslash", 75, 100, 110, 45, 55, 65),
+                                        new pokemon("Nidoqueen", 90, 92, 87, 75, 85, 76),
+                                        new pokemon("Nidoking", 81, 102, 77, 85, 75, 85),
+                                        new pokemon("Ninetales", 73, 76, 75, 81, 100, 100),
+                                        new pokemon("Jigglypuff", 115, 45, 20, 45, 25, 20),
+                                        new pokemon("Dugtrio", 35, 100, 60, 50, 70, 110),
+                                        new pokemon("Arcanine", 90, 110, 80, 100, 80, 95),
+                                        new pokemon("Alakazam", 55, 50, 45, 135, 95, 120),
+                                        new pokemon("Machamp", 90, 130, 80, 65, 85, 55),
+                                        new pokemon("Bellsprout", 50, 75, 35, 70, 30, 40),
+                                        new pokemon("Slowpoke", 90, 65, 65, 40, 40, 15),
+                                        new pokemon("Magneton", 50, 60, 95, 120, 70, 70),
+                                        new pokemon("Mewtwo", 106, 110, 90, 154, 100, 130),
+                                        new pokemon("Lanturn", 125, 58, 58, 76, 76, 67),
+                                        new pokemon("Ampharos", 90, 75, 85, 115, 90, 55),
+                                        new pokemon("Bellossom", 75, 80, 95, 90, 100, 50),
+                                        new pokemon("Quagsire", 95, 85, 85, 65, 65, 35),
+                                        new pokemon("Forretress", 75, 90, 140, 60, 60, 40),
+                                        new pokemon("Steelix", 75, 85, 200, 55, 65, 30),
+                                        new pokemon("Scizor", 70, 130, 100, 55, 80, 65),
+                                        new pokemon("Shuckle", 20, 10, 230, 10, 230, 5),
+                                        new pokemon("Houndoom", 75, 90, 50, 110, 80, 95),
+                                        new pokemon("Lugia", 106, 90, 130, 90, 154, 110),
+                                        new pokemon("Mudkip", 50, 70, 50, 50, 50, 40),
+                                        new pokemon("Ludicolo", 80, 70, 70, 90, 100, 70),
+                                        new pokemon("Shiftry", 90, 100, 60, 90, 60, 80),
+                                        new pokemon("Gardevoir", 68, 65, 65, 125, 115, 80),
+                                        new pokemon("Slaking", 150, 160, 100, 95, 65, 100),
+                                        new pokemon("Aggron", 70, 140, 230, 60, 80, 50),
+                                        new pokemon("Manetric", 70, 75, 60, 105, 60, 105),
+                                        new pokemon("Altaria", 75, 70, 90, 70, 105, 80),
+                                        new pokemon("Milotic", 95, 60, 79, 100, 125, 81),
+                                        new pokemon("Absol", 65, 130, 60, 75, 60, 75),
+                                        new pokemon("Metagross", 80, 135, 130, 95, 90, 70),
+                                        new pokemon("Rayquaza", 105, 150, 90, 150, 90, 95),
+                                        new pokemon("Roserade", 60, 70, 65, 125, 105, 90),
+                                        new pokemon("Bronzong", 67, 89, 116, 79, 116, 33),
+                                        new pokemon("Spiritomb", 50, 92, 108, 92, 108, 35),
+                                        new pokemon("Mamoswine", 110, 130, 80, 70, 60, 80),
+                                        new pokemon("Arceus", 120, 120, 120, 120, 120, 120),
+                                        new pokemon("Excadrill", 110, 135, 60, 50, 65, 88),
+                                        new pokemon("Crustle", 70, 105, 125, 65, 75, 45),
+                                        new pokemon("Cofagrigus", 58, 50, 145, 95, 105, 30),
+                                        new pokemon("Kyurem", 125, 130, 90, 130, 90, 95),
+                                        new pokemon("Aegislash", 60, 50, 150, 50, 150, 60),
+                                        new pokemon("Yveltal", 126, 131, 95, 131, 98, 99),
+                                        new pokemon("Crabominable", 97, 132, 77, 62, 67, 43),
+                                        new pokemon("Golisopod", 75, 125, 140, 60, 90, 40),
+                                        new pokemon("Lunala", 137, 113, 89, 137, 107, 97),
+                                        new pokemon("Kartana", 59, 181, 131, 59, 31, 109)
+                                    };
+
         public static Player[] CharacterStokkurinn = {  new Player("LightNir", "Rogue/arcane trickster", "Half elf", 14, 13, 12, 17, 10, 16, 12, 10),
                                         new Player("NoLeb", "Druid/Circle of Land", "Human", 10, 15, 17, 9, 13, 13, 17, 10),
                                         new Player("Sindri Páls", "Cleric", "Human", 10, 10, 10, 8, 12, 13, 10, 6),
@@ -125,8 +180,8 @@ namespace TopTrumpsDnD
                                         new Bass("Nycaloth", new double[]{18,123,20,11,19,12,10,15},new string[]{"Armor Class", "Hit Points","Strength","Dexterity", "Constitution", "intelligence", "Wisdom", "Charisma"})
                                      };
 
-        public Bass[][] stokkarnir = { CharacterStokkurinn, MonsterStokkurinn };
-        public string[] StokkaNofn = { "Character Stokkur(D&D)", "Monster Stokkur(D&D)" };
+        public Bass[][] stokkarnir = { CharacterStokkurinn, MonsterStokkurinn, pokemonStokkurinn };
+        public string[] StokkaNofn = { "Character Stokkur(D&D)", "Monster Stokkur(D&D)", "Pokémon stokkur" };
 
         public double[] AvgStats(int stokkurNb)
         {

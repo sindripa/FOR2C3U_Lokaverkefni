@@ -22,7 +22,7 @@ namespace TopTrumpsDnD
             string lysing = Tipa;
             for (int i = 0; i < Stats.Length; i++)//aðal upplysingar
 			{
-                lysing += "\n" + StatsName[i] + ":\t" + Stats[i];
+                lysing += "\n" + Stats[i] + ":\t" + StatsName[i];
 			}
             return lysing;
         }

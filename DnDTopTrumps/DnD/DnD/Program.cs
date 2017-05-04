@@ -19,12 +19,12 @@ namespace DnD
             Console.WriteLine("Veldu stokk:");
             for (int i = 0; i < Stokkar.stokkarnir.Length; i++)
             {
-                Console.WriteLine("\t" + i + ". Stokkur " + Stokkar.stokkarnir[i] + ".");
+                Console.WriteLine("\t" + (1+i) + ". " + Stokkar.StokkaNofn[i] + ".");
             }
             Console.WriteLine("0. Hætta.");
             try
             {
-                stokkavalmynd = Convert.ToInt32(Console.ReadLine());
+                stokkavalmynd = Convert.ToInt32(Console.ReadLine())-1;
             }catch (Exception ex){}
 
             do
@@ -58,7 +58,7 @@ namespace DnD
                         do
                         {
                             Console.Clear();
-                            Console.WriteLine("Player: " + Playerstokkur.Count + " vs AI: " + Aistokkur.Count);
+                            Console.WriteLine("Player deck size: " + Playerstokkur.Count + " vs AI deck size: " + Aistokkur.Count);
                             Console.WriteLine(Playerstokkur[0]+"\n");
                             for (int i = 0; i < stokkur[0].StatsName.Length; i++)
                             {
@@ -77,7 +77,8 @@ namespace DnD
                     Console.Clear();
                     if (PlayersTurn)
                     {
-                        Console.WriteLine("AI "+stokkur[0].StatsName[input]);
+                        Console.WriteLine("Player deck size: " + Playerstokkur.Count + " vs AI deck size: " + Aistokkur.Count);
+                        Console.WriteLine("AI picks: "+stokkur[0].StatsName[input]);
                                 
                     }
                     Console.WriteLine("Player: "+ Playerstokkur[0].Stats[input]+" vs AI: "+Aistokkur[0].Stats[input]);
@@ -94,43 +95,45 @@ namespace DnD
                     }
                     else if (Playerstokkur[0].Stats[input] > Aistokkur[0].Stats[input])
                     {
-                        if (random.Next(0,1)<0.5)
-                        {
-                            Playerstokkur.Add(Playerstokkur[0]);
-                            Playerstokkur.Add(Aistokkur[0]);
-                        }
-                        else
-                        {
+                            if (random.Next(0,1)<0.5)
+                            {
+                                Playerstokkur.Add(Playerstokkur[0]);
+                                Playerstokkur.Add(Aistokkur[0]);
+                            }
+                            else
+                            {
+                                Playerstokkur.Add(Aistokkur[0]);
+                                Playerstokkur.Add(Playerstokkur[0]);
+                            }
                             Aistokkur.Remove(Aistokkur[0]);
                             Playerstokkur.Remove(Playerstokkur[0]);
-                        }
-                        cardPool = shofle(cardPool);
-                        for (int i = 0; i < cardPool.Count();)
-                        {
-                            Playerstokkur.Add(cardPool[0]);
-                            cardPool.Remove(cardPool[0]);
-                        }
+                            cardPool = shofle(cardPool);
+                            for (int i = 0; i < cardPool.Count();)
+                            {
+                                Playerstokkur.Add(cardPool[0]);
+                                cardPool.Remove(cardPool[0]);
+                            }
                     }
                     else
                     {
-                        if (random.Next(0, 1) < 0.5)
-                        {
-                            Aistokkur.Add(Aistokkur[0]);
-                            Aistokkur.Add(Playerstokkur[0]);
-                        }
-                        else
-                        {
-                            Aistokkur.Add(Playerstokkur[0]);
-                            Aistokkur.Add(Aistokkur[0]);
-                        }
-                        Playerstokkur.Remove(Playerstokkur[0]);
-                        Aistokkur.Remove(Aistokkur[0]);
-                        cardPool = shofle(cardPool);
-                        for (int i = 0; i < cardPool.Count();)
-                        {
-                            Aistokkur.Add(cardPool[0]);
-                            cardPool.Remove(cardPool[0]);
-                        }
+                            if (random.Next(0, 1) < 0.5)
+                            {
+                                Aistokkur.Add(Aistokkur[0]);
+                                Aistokkur.Add(Playerstokkur[0]);
+                            }
+                            else
+                            {
+                                Aistokkur.Add(Playerstokkur[0]);
+                                Aistokkur.Add(Aistokkur[0]);
+                            }
+                            Playerstokkur.Remove(Playerstokkur[0]);
+                            Aistokkur.Remove(Aistokkur[0]);
+                            cardPool = shofle(cardPool);
+                            for (int i = 0; i < cardPool.Count();)
+                            {
+                                Aistokkur.Add(cardPool[0]);
+                                cardPool.Remove(cardPool[0]);
+                            }
                     }
                 }
                 Console.ReadKey();
@@ -141,7 +144,7 @@ namespace DnD
         public static int AI(Bass dude, double[] avgStats)
         {
             double[] shift = new double[8];
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < avgStats.Length; i++)
             {
                 shift[i] = dude.Stats[i] / avgStats[i];
             }
