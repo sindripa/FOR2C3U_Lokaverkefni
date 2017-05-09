@@ -9,6 +9,10 @@ namespace DnD
 {
     class ArtificialBot
     {
+        public override string ToString()
+        {
+            return "Error";
+        }
         private double[] average;
         public double[] Average
         {
@@ -20,6 +24,12 @@ namespace DnD
             {
                 average = value;
             }
+        }
+
+        //þetta er það sem lætur tölvuna velja
+        public virtual int AI(Bass dude)
+        {
+            return 1;
         }
 
         public ArtificialBot(double[] avgStats)

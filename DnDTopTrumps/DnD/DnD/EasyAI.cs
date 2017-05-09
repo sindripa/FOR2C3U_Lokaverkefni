@@ -10,7 +10,13 @@ namespace DnD
     class EasyAI : ArtificialBot
     {
 
-        public int AI(Bass dude)
+        public override string ToString()
+        {
+            return "Easy";
+        }
+
+        //þetta er það sem lætur tölvuna velja
+        public override int AI(Bass dude)
         {
             double[] Shift = new double[Average.Length];
             for (int i = 0; i < Average.Length; i++)
@@ -19,7 +25,7 @@ namespace DnD
             }
             for (int i = 0; i < Average.Length; i++)
             {
-                if (Shift[i] == Shift.Min())
+                if (Shift[i] == Shift.Min())//velur lægstu töluna
                 {
                     return i;
                 }

@@ -9,10 +9,16 @@ namespace DnD
 {
     class MediumAI : ArtificialBot
     {
-        public int AI()
+        public override string ToString()
+        {
+            return "Medium";
+        }
+
+        //þetta er það sem lætur tölvuna velja
+        public override int AI(Bass dude)
         {
             Random random = new Random();
-            return random.Next(0, Average.Length);
+            return random.Next(0, Average.Length);//velur random tölu
         }
 
         /*redundant constructor*/

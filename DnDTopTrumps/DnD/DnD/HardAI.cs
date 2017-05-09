@@ -10,7 +10,13 @@ namespace DnD
     class HardAI : ArtificialBot
     {
 
-        public int AI(Bass dude)
+        public override string ToString()
+        {
+            return "Hard";
+        }
+
+        //þetta er það sem lætur tölvuna velja
+        public override int AI(Bass dude)
         {
             double[] Shift = new double[Average.Length];
             for (int i = 0; i < Average.Length; i++)
@@ -19,7 +25,7 @@ namespace DnD
             }
             for (int i = 0; i < Average.Length; i++)
             {
-                if (Shift[i] == Shift.Max())
+                if (Shift[i] == Shift.Max())//velur hærstu töluna
                 {
                     return i;
                 }
